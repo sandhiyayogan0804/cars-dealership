@@ -1,0 +1,11 @@
+Get Dealers By State - cURL Command and Output
+
+State: Kansas
+
+Command:
+
+curl "http://127.0.0.1:8000/djangoapp/get_dealers/Kansas"
+
+Output:
+
+Paste the actual dealer(s) located in Kansas returned by the Django application here after running the command.
