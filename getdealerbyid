@@ -1,0 +1,9 @@
+Get Dealer By ID - cURL Command and Output
+
+Command:
+
+curl http://127.0.0.1:8000/djangoapp/dealer/1
+
+Output:
+
+Paste the actual details returned for dealer ID 1 by the Django application here after running the command.
