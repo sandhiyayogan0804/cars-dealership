@@ -1,0 +1,9 @@
+Logout User - cURL Command and Output
+
+Command:
+
+curl -X GET http://127.0.0.1:8000/djangoapp/logout
+
+Output:
+
+Successful logout response from the Django application must be pasted here after running the command.
