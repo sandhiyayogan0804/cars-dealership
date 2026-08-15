@@ -1,0 +1,76 @@
+GitHub Actions - Django CI/CD Workflow
+Status: SUCCESS
+
+========== Checkout Repository ==========
+
+Run actions/checkout@v4
+Syncing repository: sandhiyayogan0804/cars-dealership
+Getting Git version info
+Initializing the repository
+Setting up auth
+Fetching the repository
+Checking out the ref
+/usr/bin/git log -1 --format=%H
+866f341ae42ffd8d0d141b0cb6671815a39a8c2f
+
+
+========== Set up Python ==========
+
+Run actions/setup-python@v5
+Installed versions
+
+
+========== Install Dependencies ==========
+
+Run python -m pip install --upgrade pip
+
+Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages (26.2.1)
+
+Collecting Django<6.0,>=4.2
+Collecting djangorestframework>=3.14
+Collecting requests>=2.31
+Collecting gunicorn>=21.2
+Collecting whitenoise>=6.6
+Collecting python-dotenv>=1.0
+
+Successfully installed Django-5.2.17 asgiref-3.12.1 certifi-2026.7.22 charset_normalizer-3.5.1 djangorestframework-3.18.0 gunicorn-26.0.0 idna-3.18 packaging-26.3 python-dotenv-1.2.2 requests-2.34.2 sqlparse-0.6.0 urllib3-2.7.0 whitenoise-6.12.0
+
+
+========== Run Django System Check ==========
+
+Run cd server
+System check identified no issues (0 silenced).
+
+
+========== Run Django Migrations ==========
+
+Run cd server
+
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+
+
+========== CI Completed ==========
+
+Run echo "Django CI workflow completed successfully"
+Django CI workflow completed successfully
