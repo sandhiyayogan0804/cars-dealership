@@ -1,0 +1,8 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+Django version 5.2.17, using settings 'server.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
