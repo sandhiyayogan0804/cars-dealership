@@ -1,0 +1,9 @@
+Get All Car Makes and Models - cURL Command and Output
+
+Command:
+
+curl http://127.0.0.1:8000/djangoapp/get_cars
+
+Output:
+
+Paste the actual car makes and models returned by the Django application here after running the command.
