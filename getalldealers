@@ -1,0 +1,9 @@
+Get All Dealers - cURL Command and Output
+
+Command:
+
+curl http://127.0.0.1:8000/djangoapp/get_dealers
+
+Output:
+
+Paste the actual list of dealers returned by the Django application here after running the command.
