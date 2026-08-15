@@ -1,0 +1,12 @@
+Analyze Review Sentiment - cURL Command and Output
+
+Review Text:
+Fantastic services
+
+Command:
+
+curl "http://127.0.0.1:8000/djangoapp/analyze/Fantastic%20services"
+
+Output:
+
+Paste the actual sentiment analysis result returned by the application here after running the command.
