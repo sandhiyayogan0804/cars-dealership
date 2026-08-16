@@ -6,7 +6,15 @@ SECRET_KEY = "django-insecure-cars-dealership-dev-key"
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "cars-dealership-97u3.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://cars-dealership-97u3.onrender.com",
+]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
