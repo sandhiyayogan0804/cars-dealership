@@ -1,0 +1,9 @@
+Get Dealer Reviews - cURL Command and Output
+
+Command:
+
+curl http://127.0.0.1:8000/djangoapp/dealer/1/reviews
+
+Output:
+
+[{"dealer_id": 1, "reviewer": "Sandhiya", "rating": 5, "review": "Excellent service and friendly staff."}, {"dealer_id": 1, "reviewer": "Arun", "rating": 4, "review": "Good dealership experience."}]
