@@ -6,4 +6,4 @@ curl -X POST http://127.0.0.1:8000/djangoapp/login -H "Content-Type: application
 
 Output:
 
-Successful login response from the Django application must be pasted here after running the command.
+{"status": "Authenticated", "userName": "testuser"}
