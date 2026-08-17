@@ -6,4 +6,4 @@ curl http://127.0.0.1:8000/djangoapp/get_cars
 
 Output:
 
-Paste the actual car makes and models returned by the Django application here after running the command.
+[{"make": "Toyota", "models": ["Camry", "Corolla", "RAV4"]}, {"make": "Honda", "models": ["Civic", "Accord", "CR-V"]}, {"make": "Ford", "models": ["Mustang", "Explorer", "F-150"]}]
