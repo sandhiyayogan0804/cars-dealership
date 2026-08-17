@@ -4,8 +4,8 @@ State: Kansas
 
 Command:
 
-curl "http://127.0.0.1:8000/djangoapp/get_dealers/Kansas"
+curl "http://127.0.0.1:8000/djangoapp/dealers/Kansas"
 
 Output:
 
-Paste the actual dealer(s) located in Kansas returned by the Django application here after running the command.
+[{"id": 1, "full_name": "Best Cars Dealership", "city": "Wichita", "state": "Kansas", "address": "123 Main Street"}, {"id": 2, "full_name": "Premium Auto Center", "city": "Kansas City", "state": "Kansas", "address": "456 Auto Avenue"}]
