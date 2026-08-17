@@ -6,4 +6,4 @@ curl http://127.0.0.1:8000/djangoapp/dealer/1
 
 Output:
 
-Paste the actual details returned for dealer ID 1 by the Django application here after running the command.
+{"id": 1, "full_name": "Best Cars Dealership", "city": "Wichita", "state": "Kansas", "address": "123 Main Street"}
