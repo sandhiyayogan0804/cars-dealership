@@ -54,9 +54,11 @@ def home(request):
         dealer_cards += f"""
         <div class="dealer-card">
             <h2>{dealer["full_name"]}</h2>
+            <p><strong>Dealer ID:</strong> {dealer["id"]}</p>
             <p><strong>City:</strong> {dealer["city"]}</p>
             <p><strong>State:</strong> {dealer["state"]}</p>
             <p><strong>Address:</strong> {dealer["address"]}</p>
+            <p><strong>Zip Code:</strong> {dealer["zip"]}</p>
             {review_button}
         </div>
         """
