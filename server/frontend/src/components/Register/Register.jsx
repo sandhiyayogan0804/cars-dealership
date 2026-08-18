@@ -48,7 +48,7 @@ const Register = () => {
                   <input
                     type="text"
                     className="form-control"
-                    name="username"
+                    name="username" placeholder="Username"
                     value={user.username}
                     onChange={handleChange}
                     required
@@ -63,7 +63,7 @@ const Register = () => {
                   <input
                     type="text"
                     className="form-control"
-                    name="firstName"
+                    name="firstName" placeholder="First Name"
                     value={user.firstName}
                     onChange={handleChange}
                     required
@@ -78,7 +78,7 @@ const Register = () => {
                   <input
                     type="text"
                     className="form-control"
-                    name="lastName"
+                    name="lastName" placeholder="Last Name"
                     value={user.lastName}
                     onChange={handleChange}
                     required
@@ -93,7 +93,7 @@ const Register = () => {
                   <input
                     type="email"
                     className="form-control"
-                    name="email"
+                    name="email" placeholder="Email"
                     value={user.email}
                     onChange={handleChange}
                     required
@@ -108,7 +108,7 @@ const Register = () => {
                   <input
                     type="password"
                     className="form-control"
-                    name="password"
+                    name="password" placeholder="Password"
                     value={user.password}
                     onChange={handleChange}
                     required

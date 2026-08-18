@@ -7,27 +7,20 @@ from django.views.decorators.csrf import csrf_exempt
 
 DEALERS = [
     {
-        "id": 1,
-        "full_name": "Best Cars Dealership",
-        "city": "Wichita",
-        "state": "Kansas",
-        "address": "123 Main Street"
-    },
-    {
-        "id": 2,
-        "full_name": "Premium Auto Center",
-        "city": "Kansas City",
-        "state": "Kansas",
-        "address": "456 Auto Avenue"
-    },
-    {
-        "id": 3,
-        "full_name": "Quality Motors",
-        "city": "Dallas",
-        "state": "Texas",
-        "address": "789 Motor Road"
-    }
+        "id": i,
+        "full_name": f"Dealer {i} Inc",
+        "city": "Wichita" if i % 2 == 0 else "Dallas",
+        "state": "Kansas" if i % 2 == 0 else "Texas",
+        "address": f"{100 + i} Main Street",
+        "zip": f"6720{i%10}",
+        "lat": 37.68 + (i * 0.01),
+        "long": -97.33 - (i * 0.01),
+        "short_name": f"dealer{i}"
+    } for i in range(1, 51)
 ]
+
+
+
 
 
 def home(request):
@@ -186,23 +179,35 @@ def logout_user(request):
     logout(request)
 
     return JsonResponse({
-        "status": "Logged out"
+        "userName": ""
     })
 
 
 def get_dealer_reviews(request, dealer_id):
     reviews = [
         {
-            "dealer_id": dealer_id,
-            "reviewer": "Sandhiya",
-            "rating": 5,
-            "review": "Excellent service and friendly staff."
+            "id": 1,
+            "name": "Sandhiya",
+            "dealership": dealer_id,
+            "review": "Excellent service and friendly staff.",
+            "purchase": True,
+            "purchase_date": "02/15/2026",
+            "car_make": "Toyota",
+            "car_model": "Corolla",
+            "car_year": 2020,
+            "sentiment": "positive"
         },
         {
-            "dealer_id": dealer_id,
-            "reviewer": "Arun",
-            "rating": 4,
-            "review": "Good dealership experience."
+            "id": 2,
+            "name": "Arun",
+            "dealership": dealer_id,
+            "review": "Good dealership experience.",
+            "purchase": True,
+            "purchase_date": "02/10/2026",
+            "car_make": "Honda",
+            "car_model": "Civic",
+            "car_year": 2021,
+            "sentiment": "positive"
         }
     ]
 
@@ -238,26 +243,29 @@ def get_dealers_by_state(request, state):
 
 
 def get_all_car_makes(request):
-    car_makes = [
-        {
-            "make": "Toyota",
-            "models": ["Camry", "Corolla", "RAV4"]
-        },
-        {
-            "make": "Honda",
-            "models": ["Civic", "Accord", "CR-V"]
-        },
-        {
-            "make": "Ford",
-            "models": ["Mustang", "Explorer", "F-150"]
-        }
+    car_models = [
+        {"CarModel": "Camry", "CarMake": "Toyota"},
+        {"CarModel": "Corolla", "CarMake": "Toyota"},
+        {"CarModel": "RAV4", "CarMake": "Toyota"},
+        {"CarModel": "Yaris", "CarMake": "Toyota"},
+        {"CarModel": "Prius", "CarMake": "Toyota"},
+        {"CarModel": "Civic", "CarMake": "Honda"},
+        {"CarModel": "Accord", "CarMake": "Honda"},
+        {"CarModel": "CR-V", "CarMake": "Honda"},
+        {"CarModel": "Fit", "CarMake": "Honda"},
+        {"CarModel": "Pilot", "CarMake": "Honda"},
+        {"CarModel": "Mustang", "CarMake": "Ford"},
+        {"CarModel": "Explorer", "CarMake": "Ford"},
+        {"CarModel": "F-150", "CarMake": "Ford"},
+        {"CarModel": "Focus", "CarMake": "Ford"},
+        {"CarModel": "Escape", "CarMake": "Ford"}
     ]
+    return JsonResponse({"CarModels": car_models})
 
-    return JsonResponse(car_makes, safe=False)
 
-
-def analyze_review(request):
-    review_text = request.GET.get("text", "")
+def analyze_review(request, review_text=""):
+    if not review_text:
+        review_text = request.GET.get("text", "")
 
     sentiment = (
         "positive"

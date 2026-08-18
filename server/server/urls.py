@@ -40,11 +40,23 @@ urlpatterns = [
         name="dealer_reviews"
     ),
 
+    # Fetch reviews API (required endpoint)
+    path(
+        "djangoapp/fetchReviews/dealer/<int:dealer_id>",
+        views.get_dealer_reviews,
+        name="fetch_dealer_reviews"
+    ),
+
     # All dealers
     path(
         "djangoapp/get_dealers",
         views.get_all_dealers,
         name="get_all_dealers"
+    ),
+    path(
+        "djangoapp/fetchDealers",
+        views.get_all_dealers,
+        name="fetch_dealers"
     ),
 
     # Dealer by ID
@@ -53,12 +65,22 @@ urlpatterns = [
         views.get_dealer_by_id,
         name="get_dealer_by_id"
     ),
+    path(
+        "djangoapp/fetchDealer/<int:dealer_id>",
+        views.get_dealer_by_id,
+        name="fetch_dealer_by_id"
+    ),
 
     # Dealers by state
     path(
         "djangoapp/dealers/<str:state>",
         views.get_dealers_by_state,
         name="get_dealers_by_state"
+    ),
+    path(
+        "djangoapp/fetchDealers/<str:state>",
+        views.get_dealers_by_state,
+        name="fetch_dealers_by_state"
     ),
 
     # All car makes and models
@@ -73,6 +95,11 @@ urlpatterns = [
         "djangoapp/analyze",
         views.analyze_review,
         name="analyze_review"
+    ),
+    path(
+        "djangoapp/analyze/<str:review_text>",
+        views.analyze_review,
+        name="analyze_review_path"
     ),
 
     # Dealer details + reviews webpage

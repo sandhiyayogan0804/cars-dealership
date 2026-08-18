@@ -2,8 +2,8 @@ Get Dealer By ID - cURL Command and Output
 
 Command:
 
-curl http://127.0.0.1:8000/djangoapp/dealer/1
+curl http://127.0.0.1:8000/djangoapp/fetchDealer/1
 
 Output:
 
-{"id": 1, "full_name": "Best Cars Dealership", "city": "Wichita", "state": "Kansas", "address": "123 Main Street"}
+{"id": 1, "full_name": "Dealer 1 Inc", "city": "Dallas", "state": "Texas", "address": "101 Main Street", "zip": "67201", "lat": 37.69, "long": -97.34, "short_name": "dealer1"}

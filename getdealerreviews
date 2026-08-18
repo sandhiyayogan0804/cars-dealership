@@ -2,8 +2,8 @@ Get Dealer Reviews - cURL Command and Output
 
 Command:
 
-curl http://127.0.0.1:8000/djangoapp/dealer/1/reviews
+curl http://127.0.0.1:8000/djangoapp/fetchReviews/dealer/1
 
 Output:
 
-[{"dealer_id": 1, "reviewer": "Sandhiya", "rating": 5, "review": "Excellent service and friendly staff."}, {"dealer_id": 1, "reviewer": "Arun", "rating": 4, "review": "Good dealership experience."}]
+[{"id": 1, "name": "Sandhiya", "dealership": 1, "review": "Excellent service and friendly staff.", "purchase": true, "purchase_date": "02/15/2026", "car_make": "Toyota", "car_model": "Corolla", "car_year": 2020, "sentiment": "positive"}, {"id": 2, "name": "Arun", "dealership": 1, "review": "Good dealership experience.", "purchase": true, "purchase_date": "02/10/2026", "car_make": "Honda", "car_model": "Civic", "car_year": 2021, "sentiment": "positive"}]

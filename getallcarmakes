@@ -6,4 +6,4 @@ curl http://127.0.0.1:8000/djangoapp/get_cars
 
 Output:
 
-[{"make": "Toyota", "models": ["Camry", "Corolla", "RAV4"]}, {"make": "Honda", "models": ["Civic", "Accord", "CR-V"]}, {"make": "Ford", "models": ["Mustang", "Explorer", "F-150"]}]
+{"CarModels": [{"CarModel": "Camry", "CarMake": "Toyota"}, {"CarModel": "Corolla", "CarMake": "Toyota"}, {"CarModel": "RAV4", "CarMake": "Toyota"}, {"CarModel": "Yaris", "CarMake": "Toyota"}, {"CarModel": "Prius", "CarMake": "Toyota"}, {"CarModel": "Civic", "CarMake": "Honda"}, {"CarModel": "Accord", "CarMake": "Honda"}, {"CarModel": "CR-V", "CarMake": "Honda"}, {"CarModel": "Fit", "CarMake": "Honda"}, {"CarModel": "Pilot", "CarMake": "Honda"}, {"CarModel": "Mustang", "CarMake": "Ford"}, {"CarModel": "Explorer", "CarMake": "Ford"}, {"CarModel": "F-150", "CarMake": "Ford"}, {"CarModel": "Focus", "CarMake": "Ford"}, {"CarModel": "Escape", "CarMake": "Ford"}]}

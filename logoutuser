@@ -6,4 +6,4 @@ curl -X GET http://127.0.0.1:8000/djangoapp/logout
 
 Output:
 
-{"status": "Logged out"}
+{"userName": ""}
