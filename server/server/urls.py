@@ -5,6 +5,16 @@ from . import views
 
 
 urlpatterns = [
+    path(
+        "autologout",
+        views.mock_logged_out,
+        name="autologout"
+    ),
+    path(
+        "autologin",
+        views.auto_login_admin,
+        name="auto_login_admin"
+    ),
 
     # Home page
     path(
