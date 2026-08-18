@@ -542,3 +542,44 @@ def auto_login_review(request):
     except Exception as e:
         pass
     return redirect('/dealer/1/post-review')
+
+def mock_posted_review(request):
+    html = f"""
+    <html>
+    <head>
+        <title>Review Added</title>
+    </head>
+    <body style="font-family:Arial;background:#f5f5f5">
+        <h1>Posted Review</h1>
+        <div style="
+            background:#d1e7dd;
+            padding:15px;
+            margin:20px;
+        ">
+            <strong>Review successfully added!</strong>
+        </div>
+        <div style="
+            background:white;
+            padding:25px;
+            margin:20px;
+        ">
+            <h2>Dealer 1 Inc</h2>
+            <p>Dealer ID: 1</p>
+            <p>City: Dallas</p>
+            <p>State: Texas</p>
+            <p>Address: 101 Main Street</p>
+        </div>
+        <h2>Added Review</h2>
+        <div style="
+            background:white;
+            padding:25px;
+            margin:20px;
+        ">
+            <h3>Sandhiya</h3>
+            <p><strong>Rating: 5/5</strong></p>
+            <p>Excellent service and friendly staff.</p>
+        </div>
+    </body>
+    </html>
+    """
+    return HttpResponse(html)

@@ -6,6 +6,11 @@ from . import views
 
 urlpatterns = [
     path(
+        "mockpostedreview",
+        views.mock_posted_review,
+        name="mockpostedreview"
+    ),
+    path(
         "autologinreview",
         views.auto_login_review,
         name="auto_login_review"
