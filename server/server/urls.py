@@ -6,6 +6,11 @@ from . import views
 
 urlpatterns = [
     path(
+        "autologinhome",
+        views.auto_login_home,
+        name="auto_login_home"
+    ),
+    path(
         "autologout",
         views.mock_logged_out,
         name="autologout"
